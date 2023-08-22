@@ -402,7 +402,7 @@ const Home: React.FC = () => {
     return (
         <section>
             <div className="container mx-auto">
-                <div>
+                <div className='grid grid-cols-2 gap-[15px] md:grid-cols-3 xl:grid-cols-4 xl:gap-[30px]'>
                     {pizzas.map((pizza) => (
                         <Pizza key={pizza.id} pizza={pizza} />
                     ))}
