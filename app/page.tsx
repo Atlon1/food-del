@@ -1,9 +1,30 @@
+import React, {FC} from 'react';
+
 // import components
 import Pizza from './components/Pizza';
 import Banner from './components/Banner';
 
+
+interface Topping {
+    image: string;
+    name: string;
+    price: number;
+}
+
+interface Pizza {
+    id: number;
+    name: string;
+    description: string;
+    image: string;
+    priceSm: number;
+    priceMd: number;
+    priceLg: number;
+    toppings: Topping[];
+}
+
+
 // pizza data
-const pizzas = [
+const pizzas: Pizza[] = [
     {
         id: 1,
         name: 'capricciosa',
@@ -376,6 +397,20 @@ const pizzas = [
     },
 ];
 
-export default function Home() {
-    return <section>home</section>;
-}
+const Home: React.FC = () => {
+
+    return (
+        <section>
+            <div className="container mx-auto">
+                <div>
+                    {pizzas.map((pizza) => (
+                        <Pizza key={pizza.id} pizza={pizza} />
+                    ))}
+                </div>
+            </div>
+        </section>
+    );
+};
+
+export default Home;
+
