@@ -33,6 +33,7 @@ const Pizza: FC<pizzaProps> = ({pizza}) => {
     }
 
 
+
     return (
         <div className='group py-2 px-4 xl:py-4 xl:px-2 rounded-xl'>
             <Image
@@ -75,7 +76,12 @@ const Pizza: FC<pizzaProps> = ({pizza}) => {
                     className='absolute z-30 right-2 top-2 hover:scale-110 duration-200 cursor-pointer'>
                     <IoCloseOutline className='text-4xl text-orange'/>
                 </div>
-            </Modal>)}
+                <PizzaDetails pizza={pizza}
+                              modal={modal}
+                              setModal={setModal}
+                />
+            </Modal>
+            )}
         </div>
     )
         ;
