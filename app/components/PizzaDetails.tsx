@@ -8,9 +8,11 @@ import {set} from "zod";
 
 interface pizzaType {
     pizza: any;
+    modal: any;
+    setModal: any;
 }
 
-const PizzaDetails: FC<pizzaType> = ({pizza}) => {
+const PizzaDetails: FC<pizzaType> = ({pizza, modal, setModal}) => {
     const [size, setSize] = useState('medium');
     const [crust, setCrust] = useState('traditional');
     const [additionalTopping, setAdditionalTopping] = useState([]);
