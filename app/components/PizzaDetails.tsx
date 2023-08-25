@@ -42,6 +42,7 @@ const PizzaDetails: FC<pizzaType> = ({pizza}) => {
     }, [additionalTopping]);
 
 
+
     return (
     <div className='flex flex-col lg:flex-row lg:gap-x-8 h-full md:p-8'>
         <div className='lg:flex-1 flex justify-center items-center'>
@@ -71,7 +72,7 @@ const PizzaDetails: FC<pizzaType> = ({pizza}) => {
                             </span>
                         </div>
                     </div>
-                    <SizeSelection/>
+                    <SizeSelection pizza={pizza} size={size} setSize={setSize}/>
                     <CrustSelection/>
                     <div>
                         Choose topping
