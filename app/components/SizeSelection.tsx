@@ -11,8 +11,8 @@ const SizeSelection: FC<SizeselcetionProps> = ({pizza, size, setSize}) => {
 
 
     return (
-        <div className=''>
-            <div>
+        <div className='mx-auto max-w-sm lg:max-w-none flex items-center justify-center lg:justify-start'>
+            <div className='flex gap-x-12 items-baseline mb-10 font-medium'>
                 <label className='flex flex-col items-center gap-x-2 cursor-pointer'>
                     <Image
                         className={`${size === 'small' ? 'border-2 border-orange p-[2px] rounded-full' : 'border-transparent filter saturate-[.1]'}`}
@@ -24,7 +24,7 @@ const SizeSelection: FC<SizeselcetionProps> = ({pizza, size, setSize}) => {
                            onChange={(e) => setSize(e.target.value)}
                            className='appearance-none'
                     />
-                    small
+                    Small
                 </label>
                 <label className='flex flex-col items-center gap-x-2 cursor-pointer'>
                     <Image
@@ -37,7 +37,7 @@ const SizeSelection: FC<SizeselcetionProps> = ({pizza, size, setSize}) => {
                            onChange={(e) => setSize(e.target.value)}
                            className='appearance-none'
                     />
-                    medium
+                    Medium
                 </label>
                 <label className='flex flex-col items-center gap-x-2 cursor-pointer'>
                     <Image

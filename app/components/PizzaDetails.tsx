@@ -58,7 +58,7 @@ const PizzaDetails: FC<pizzaType> = ({pizza, modal, setModal}) => {
                     />
                 </div>
             </div>
-            <div className='bg-pink-200 flex flex-col flex-1'>
+            <div className='flex flex-col flex-1'>
                 <div className='flex-1 p-2 text-center lg:text-left'>
                     <div
                         className='flex-1 bg-white overflow-y-scroll h-[26vh] scrollbar-thin scrollbar-thumb-gray-500 scrollbar-track-white pr-2'>
