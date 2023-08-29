@@ -13,6 +13,7 @@ interface pizzaType {
 }
 
 const PizzaDetails: FC<pizzaType> = ({pizza, modal, setModal}) => {
+
     const [size, setSize] = useState('medium');
     const [crust, setCrust] = useState('traditional');
     const [additionalTopping, setAdditionalTopping] = useState([]);
@@ -64,7 +65,7 @@ const PizzaDetails: FC<pizzaType> = ({pizza, modal, setModal}) => {
                         className='flex-1 bg-white overflow-y-scroll h-[26vh] scrollbar-thin scrollbar-thumb-gray-500 scrollbar-track-white pr-2'>
                         <div className='font-semibold'>
                             <h2 className='capitalize text-3xl mb-1'>{pizza.name}</h2>
-                            <div className='bg-yellow-200 mb-6 text-lg font-medium'>
+                            <div className='mb-6 text-lg font-medium'>
                             <span>{size === "small" ? '25 cm' :
                                 size === "medium" ? "30 cm" :
                                     size === "large" ? "35 cm" : null}
@@ -75,7 +76,7 @@ const PizzaDetails: FC<pizzaType> = ({pizza, modal, setModal}) => {
                             </div>
                         </div>
                         <SizeSelection pizza={pizza} size={size} setSize={setSize}/>
-                        <CrustSelection/>
+                        <CrustSelection crust={crust} setCrust={setCrust}/>
                         <div>
                             Choose topping
                         </div>
