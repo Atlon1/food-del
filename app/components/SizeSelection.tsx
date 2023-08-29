@@ -15,7 +15,7 @@ const SizeSelection: FC<SizeselcetionProps> = ({pizza, size, setSize}) => {
             <div className='flex gap-x-12 items-baseline mb-10 font-medium'>
                 <label className='flex flex-col items-center gap-x-2 cursor-pointer'>
                     <Image
-                        className={`${size === 'small' ? 'border-2 border-orange p-[2px] rounded-full' : 'border-transparent filter saturate-[.1]'}`}
+                        className={`${size === 'small' ? 'border-2 border-orange p-[2px] rounded-full' : 'border-transparent filter saturate-[.1]'} mb-1`}
                         src={pizza.image} width={60} height={60} alt='image'/>
                     <input type='radio'
                            name='size'
@@ -41,7 +41,7 @@ const SizeSelection: FC<SizeselcetionProps> = ({pizza, size, setSize}) => {
                 </label>
                 <label className='flex flex-col items-center gap-x-2 cursor-pointer'>
                     <Image
-                        className={`${size === 'large' ? 'border-2 border-orange p-[2px] rounded-full' : 'border-transparent filter saturate-[.1]'}`}
+                        className={`${size === 'large' ? 'border-2 border-orange p-[2px] rounded-full' : 'border-transparent filter saturate-[.1]'} mb-1`}
                         src={pizza.image} width={80} height={80} alt='image'/>
                     <input type='radio'
                            name='size'
