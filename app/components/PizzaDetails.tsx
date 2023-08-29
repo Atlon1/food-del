@@ -77,7 +77,7 @@ const PizzaDetails: FC<pizzaType> = ({pizza, modal, setModal}) => {
                         </div>
                         <SizeSelection pizza={pizza} size={size} setSize={setSize}/>
                         <CrustSelection crust={crust} setCrust={setCrust}/>
-                        <div>
+                        <div className='mb-4 text-xl font-semibold'>
                             Choose topping
                         </div>
                         <div>
