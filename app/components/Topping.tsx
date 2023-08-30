@@ -4,7 +4,7 @@ import {IoMdCheckmark} from 'react-icons/io'
 
 interface toppingProps {
     topping: any
-    additionalTopping: object
+    additionalTopping: any
     setAdditionalTopping: any
 }
 
@@ -13,9 +13,14 @@ const Topping: FC<toppingProps> = ({topping, additionalTopping, setAdditionalTop
 
     const [isChecked, setIsChecked] = useState(false)
 
+    const handleCheckBox = () => {
+        setIsChecked(!isChecked)
+    }
+
 
     return (
-        <div className={`${isChecked && 'border-orange'} w-full max-w-[110px] h=[140px] p-1 flex flex-col items-center justify-center border rounded-md bg-white relative`}>
+        <div
+            className={`${isChecked && 'border-orange'} w-full max-w-[110px] h=[140px] p-1 flex flex-col items-center justify-center border rounded-md bg-white relative`}>
             <Image src={topping.image}
                    width={70}
                    height={70}
@@ -24,10 +29,13 @@ const Topping: FC<toppingProps> = ({topping, additionalTopping, setAdditionalTop
             <div className='text-sm capitalize text-center font-medium'>
                 {topping.name}
             </div>
-            <input type='checkbox'
-            checked={isChecked}
+            <input
+                className='absolute w-full h-full opacity-0 cursor-pointer'
+                type='checkbox'
+                checked={isChecked}
+                onChange={handleCheckBox}
             />
-            <div className={`${isChecked ? 'opacity-100': 'opacity-0'}`}>
+            <div className={`${isChecked ? 'opacity-100' : 'opacity-0'} absolute top-1 right-1`}>
                 <IoMdCheckmark className='text-xl text-orange'/>
             </div>
         </div>
