@@ -2,8 +2,12 @@ import React, {useState, useEffect, FC} from "react";
 import Image from "next/image";
 import {IoMdCheckmark} from 'react-icons/io'
 
+interface Topping {
+    name: string
+    image: string
+}
 interface toppingProps {
-    topping: any
+    topping: Topping[]
     additionalTopping: any
     setAdditionalTopping: any
 }
