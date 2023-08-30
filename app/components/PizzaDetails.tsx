@@ -82,7 +82,10 @@ const PizzaDetails: FC<pizzaType> = ({pizza, modal, setModal}) => {
                         </div>
                         <div>
                             {pizza.toppings?.map((topping: string, index: number) => {
-                                return <Topping key={index}/>
+                                return <Topping topping={topping}
+                                                additionalTopping={additionalTopping}
+                                                setAdditionalToppig={setAdditionalTopping}
+                                                key={index}/>
                             })}
                         </div>
                     </div>
