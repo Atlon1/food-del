@@ -15,9 +15,21 @@ const Topping: FC<toppingProps> = ({topping, additionalTopping, setAdditionalTop
 
 
     return (
-        <div className={`${isChecked && 'border-orange'} w-full max-w-[110px]h=[140px] p-1`}>
-            <Image src={topping.image} width={70} height={70}/>
-
+        <div className={`${isChecked && 'border-orange'} w-full max-w-[110px] h=[140px] p-1 flex flex-col items-center justify-center border rounded-md bg-white relative`}>
+            <Image src={topping.image}
+                   width={70}
+                   height={70}
+                   alt='image'
+                   className='mb-2'/>
+            <div className='text-sm capitalize text-center font-medium'>
+                {topping.name}
+            </div>
+            <input type='checkbox'
+            checked={isChecked}
+            />
+            <div className={`${isChecked ? 'opacity-100': 'opacity-0'}`}>
+                <IoMdCheckmark className='text-xl text-orange'/>
+            </div>
         </div>
     );
 };

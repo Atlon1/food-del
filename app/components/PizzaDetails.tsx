@@ -80,7 +80,7 @@ const PizzaDetails: FC<pizzaType> = ({pizza, modal, setModal}) => {
                         <div className='mb-4 text-xl font-semibold'>
                             Choose topping
                         </div>
-                        <div>
+                        <div className='flex flex-1 flex-wrap gap-2 py-1 justify-center lg:justify-start'>
                             {pizza.toppings?.map((topping: string, index: number) => {
                                 return <Topping topping={topping}
                                                 additionalTopping={additionalTopping}
