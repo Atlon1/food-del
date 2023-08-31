@@ -2,12 +2,9 @@ import React, {useState, useEffect, FC} from "react";
 import Image from "next/image";
 import {IoMdCheckmark} from 'react-icons/io'
 
-interface Topping {
-    name: string
-    image: string
-}
+
 interface toppingProps {
-    topping: Topping[]
+    topping: any
     additionalTopping: any
     setAdditionalTopping: any
 }
@@ -20,6 +17,23 @@ const Topping: FC<toppingProps> = ({topping, additionalTopping, setAdditionalTop
     const handleCheckBox = () => {
         setIsChecked(!isChecked)
     }
+
+    const handleTopping = () => {
+        if (isChecked){
+            const newTopping = new Set([...additionalTopping, {...topping}])
+            setAdditionalTopping(Array.from(newTopping))
+
+        } else {
+            const newTopping = additionalTopping.filter((toppingObj: any) => {
+                return toppingObj.name !== topping.name
+            })
+            setAdditionalTopping(newTopping)
+        }
+    }
+
+    useEffect(() => {
+        handleTopping()
+    }, [isChecked]);
 
 
     return (

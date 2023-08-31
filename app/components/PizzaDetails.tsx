@@ -20,6 +20,7 @@ const PizzaDetails: FC<pizzaType> = ({pizza, modal, setModal}) => {
     const [additionalToppingPrice, setAdditionalToppingPrice] = useState(0);
     const [price, setPrice] = useState(0);
 
+
     useEffect(() => {
 
         if (size === 'small') {
@@ -62,7 +63,7 @@ const PizzaDetails: FC<pizzaType> = ({pizza, modal, setModal}) => {
             <div className='flex flex-col flex-1'>
                 <div className='flex-1 p-2 text-center lg:text-left'>
                     <div
-                        className='flex-1 bg-white overflow-y-scroll h-[26vh] scrollbar-thin scrollbar-thumb-gray-500 scrollbar-track-white pr-2'>
+                        className='flex-1 bg-white overflow-y-scroll h-[30vh] scrollbar-thin scrollbar-thumb-gray-500 scrollbar-track-white pr-2'>
                         <div className='font-semibold'>
                             <h2 className='capitalize text-3xl mb-1'>{pizza.name}</h2>
                             <div className='mb-6 text-lg font-medium'>
@@ -82,9 +83,10 @@ const PizzaDetails: FC<pizzaType> = ({pizza, modal, setModal}) => {
                         </div>
                         <div className='flex flex-1 flex-wrap gap-2 py-1 justify-center lg:justify-start'>
                             {pizza.toppings?.map((topping: string, index: number) => {
+                                // @ts-ignore
                                 return <Topping topping={topping}
                                                 additionalTopping={additionalTopping}
-                                                setAdditionalToppig={setAdditionalTopping}
+                                                setAdditionalTopping={setAdditionalTopping}
                                                 key={index}/>
                             })}
                         </div>
