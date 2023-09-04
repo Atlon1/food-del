@@ -1,4 +1,5 @@
 import './globals.css'
+import Nav from './components/Nav'
 import type {Metadata} from 'next'
 
 import {Bangers, Quicksand, Roboto_Condensed} from 'next/font/google'
@@ -36,6 +37,7 @@ export default function RootLayout({
         <body className={`${quicksand.variable} ${bangers.variable} ${robotoCondensed.variable}
         font-quicksand
       `}>
+        <Nav/>
         {children}
         </body>
         </html>
