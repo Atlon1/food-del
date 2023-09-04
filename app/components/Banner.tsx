@@ -19,15 +19,21 @@ const Banner = () => {
                     factorX={0.1}
                     factorY={0.2}
                 >
-                    <div className='flex flex-col lg:flex-row items-center text-center lg:text-left flex-1 px-6 text-white'>
-                        <div>Best pizza in town</div>
-                        <h1 className='text-6xl lg:text-8xl font-bangers drop-shadow-mf'>Pizza perfection <br/> in every
-                            bite</h1>
+                    <div
+                        className='flex flex-col lg:flex-row items-center text-center lg:text-left flex-1 px-6 text-white'>
+                        <div className='flex-1'>
+                            <div className='font-bangers text-[32px] text-white uppercase tracking-[0.03em]'>
+                                Best pizza in town
+                            </div>
+                            <h1 className='text-6xl lg:text-8xl font-bangers drop-shadow-mf'>
+                                Pizza perfection <br/> in every bite
+                            </h1>
+                        </div>
                     </div>
                 </MouseParallaxChild>
-                <MouseParallaxChild 
-                    factorX={0.2} 
-                    factorY={0.3} 
+                <MouseParallaxChild
+                    factorX={0.2}
+                    factorY={0.3}
                     className='relative'
                 >
                     <div>
@@ -41,7 +47,18 @@ const Banner = () => {
                             />
                         </div>
                     </div>
-                
+                    <MouseParallaxChild
+                    factorX={0.2}
+                    factorY={0.3}
+                    className='absolute top-6 left-4 hidden xl:flex'
+                    >
+                        <Image
+                            src={`/chilli-1.png`}
+                            width={160}
+                            height={84}
+                            alt='chilli'
+                            priority={true}/>
+                    </MouseParallaxChild>
                 </MouseParallaxChild>
             </MouseParallaxContainer>
         </div>
