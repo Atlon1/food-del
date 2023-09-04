@@ -32,7 +32,13 @@ const Banner = () => {
                 >
                     <div>
                         <div>
-                            <Image src={'/pizza-banner.png'} alt="banner" width={550} height={558}/>
+                            <Image
+                                src={'/pizza-banner.png'}
+                                alt="banner"
+                                width={550}
+                                height={558}
+                                priority={true}
+                            />
                         </div>
                     </div>
                 

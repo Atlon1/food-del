@@ -84,7 +84,6 @@ const Pizza: FC<pizzaProps> = ({pizza}) => {
                 </Modal>
             )}
         </div>
-    )
-        ;
+    );
 }
 export default Pizza;
