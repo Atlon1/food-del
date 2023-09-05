@@ -1,8 +1,13 @@
+"use client"
 import {BsHandbagFill} from 'react-icons/bs'
+import {useContext} from "react";
+import {CartContext} from "@/app/context/CartContext";
 
 
 
 const CartMobileIcon = () => {
+
+    console.log(useContext(CartContext))
 
     return (
         <div className='bg-tertiary w-[72px] h-[72px] rounded-full flex justify-center

@@ -1,9 +1,12 @@
 import './globals.css'
 import Nav from './components/Nav'
 import CartMobileIcon from "@/app/components/CartMobileIcon";
+
+import CartProvider from "@/app/context/CartContext";
 import type {Metadata} from 'next'
 
 import {Bangers, Quicksand, Roboto_Condensed} from 'next/font/google'
+
 
 const quicksand = Quicksand({
     subsets: ['latin'],
@@ -34,15 +37,18 @@ export default function RootLayout({
     children: React.ReactNode
 }) {
     return (
-        <html lang="en">
-        <body className={`${quicksand.variable} ${bangers.variable} ${robotoCondensed.variable}
+        <CartProvider>
+
+            <html lang="en">
+            <body className={`${quicksand.variable} ${bangers.variable} ${robotoCondensed.variable}
         font-quicksand
       `}>
 
-        <Nav/>
-        <CartMobileIcon/>
-        {children}
-        </body>
-        </html>
+            <Nav/>
+            <CartMobileIcon/>
+            {children}
+            </body>
+            </html>
+        </CartProvider>
     )
 }

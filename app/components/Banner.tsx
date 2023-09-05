@@ -68,7 +68,7 @@ const Banner = () => {
                             src={`/chilli-2.png`}
                             width={160}
                             height={84}
-                            alt='chilli'
+                            alt='chilli2'
                             priority={true}/>
                     </MouseParallaxChild>
                     <MouseParallaxChild
@@ -80,7 +80,7 @@ const Banner = () => {
                             src={`/garlic-1.png`}
                             width={84}
                             height={72}
-                            alt='chilli'
+                            alt='garlic1'
                             priority={true}/>
                     </MouseParallaxChild>
                     <MouseParallaxChild
@@ -92,7 +92,7 @@ const Banner = () => {
                             src={`/garlic-2.png`}
                             width={100}
                             height={72}
-                            alt='chilli'
+                            alt='garlic2'
                             priority={true}/>
                     </MouseParallaxChild>
                     <MouseParallaxChild
@@ -104,7 +104,7 @@ const Banner = () => {
                             src={`/garlic-3.png`}
                             width={100}
                             height={72}
-                            alt='chilli'
+                            alt='garlic3'
                             priority={true}/>
                     </MouseParallaxChild>
                     <MouseParallaxChild
@@ -116,7 +116,7 @@ const Banner = () => {
                             src={`/leaves.png`}
                             width={180}
                             height={72}
-                            alt='chilli'
+                            alt='leaves'
                             priority={true}/>
                     </MouseParallaxChild>
 
