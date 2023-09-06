@@ -1,10 +1,10 @@
 'use client'
 import React, {createContext, FC, useState} from "react";
 import {CartContextType} from "@/app/@types/context";
-import {boolean} from "zod";
+
 
 interface ChildrenProps {
-    children: any
+    children: React.ReactNode;
 }
 
 export const CartContext = createContext<CartContextType | null>(null)
@@ -15,7 +15,8 @@ const CartProvider: FC<ChildrenProps> = ({children}) => {
 
     return (
         // @ts-ignore
-        <CartContext.Provider value={{isOpen, setIsOpen}}>
+        <CartContext.Provider
+            value={{isOpen, setIsOpen}}>
             {children}
         </CartContext.Provider>
     )
