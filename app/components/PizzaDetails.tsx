@@ -1,10 +1,10 @@
-import React, {FC, useState, useEffect} from "react";
+import React, {FC, useState, useEffect, useContext} from "react";
 import Image from "next/image";
 
 import SizeSelection from "@/app/components/SizeSelection";
 import CrustSelection from "@/app/components/CrustSelection";
 import Topping from "@/app/components/Topping";
-import {set} from "zod";
+import {CartContext} from "@/app/context/CartContext";
 
 interface pizzaType {
     pizza: any;
@@ -19,6 +19,9 @@ const PizzaDetails: FC<pizzaType> = ({pizza, modal, setModal}) => {
     const [additionalTopping, setAdditionalTopping] = useState([]);
     const [additionalToppingPrice, setAdditionalToppingPrice] = useState(0);
     const [price, setPrice] = useState(0);
+
+
+    const {addToCart} = useContext<any>(CartContext)
 
 
     useEffect(() => {
@@ -93,7 +96,9 @@ const PizzaDetails: FC<pizzaType> = ({pizza, modal, setModal}) => {
                     </div>
                 </div>
                 <div className='h-full flex items-center px-2 lg:items-end'>
-                    <button className=' btn btn-lg gradient w-full flex  justify-center'>
+                    <button
+                        onClick={()=> addToCart(pizza.id, pizza.image, pizza.name, price, additionalTopping, size, crust)}
+                        className='btn btn-lg gradient w-full flex  justify-center'>
                         <div>
                             Add to cart for
                         </div>
