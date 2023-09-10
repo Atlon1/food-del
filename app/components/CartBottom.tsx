@@ -37,9 +37,7 @@ const CartBottom = () => {
             </div>
             <div className='flex flex-col gap-y-3'>
                 <button
-                    onClick={() => {
-                        setIsOpen(false), openModal(true)
-                    }}
+                    onClick={openModal}
                     className='btn btn-lg gradient font-semibold flex justify-center'>
                     Checkout
                 </button>
