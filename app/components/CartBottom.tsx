@@ -18,7 +18,7 @@ Modal.setAppElement('body')
 const CartBottom = () => {
 
 
-    const {setIsOpen, cart} = useContext<any>(CartContext)
+    const {cart, cartTotal} = useContext<any>(CartContext)
 
     const [modal, setModal] = useState(false)
 
@@ -33,7 +33,7 @@ const CartBottom = () => {
     return <>{cart.length >= 1 ? <div>
             <div className='px-6 py-3 lg:py-6 mt-auto text-lg font-semibold font-robotoCondensed'>
                 <div>Total:</div>
-                <div>$320</div>
+                <div>$ {parseFloat(cartTotal).toFixed(2)}</div>
             </div>
             <div className='flex flex-col gap-y-3'>
                 <button
