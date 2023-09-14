@@ -58,7 +58,7 @@ const CartBottom = () => {
                         className='absolute z-30 right-2 top-2 hover:scale-110 duration-300 transition-all cursor-pointer'>
                         <IoCloseOutline className='text-4xl text-orange'/>
                     </div>
-                    <CheckoutDetails/>
+                    <CheckoutDetails setModal={setModal}/>
                 </Modal>
             )}
     </>
