@@ -14,7 +14,7 @@ type Pizza = {
 }
 const CheckoutDetails: FC<DetailsProps> = ({setModal}) => {
 
-    const {cart, setCart, cartTotal} = useContext<any>(CartContext)
+    const {cart, setCart} = useContext<any>(CartContext)
     const [successMsg, setSuccessMsg] = useState(false)
     const [count, setCount] = useState(5)
 
@@ -38,7 +38,7 @@ const CheckoutDetails: FC<DetailsProps> = ({setModal}) => {
             }, 5000)
             return () => clearTimeout(timer)
         }
-    }, [successMsg]);
+    }, [setCart, setModal, successMsg]);
 
 
     return (
