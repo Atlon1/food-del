@@ -1,4 +1,4 @@
-import React from "react";
+import React, {ReactNode} from "react";
 import './globals.css'
 import Nav from './components/Nav'
 import CartMobileIcon from "@/app/components/CartMobileIcon";
@@ -26,7 +26,7 @@ const robotoCondensed = Roboto_Condensed({
 });
 
 type Children = {
-    children: any
+    children?: ReactNode
 }
 
 
@@ -34,6 +34,11 @@ export default function RootLayout({children} : Children) {
     return (
         <CartProvider>
             <html lang="en">
+            <head>
+                <title>Pizza land</title>
+                <meta charSet="utf-8" />
+                <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+            </head>
             <body
                 suppressHydrationWarning={true}
                 className={`${quicksand.variable} ${bangers.variable} ${robotoCondensed.variable}
