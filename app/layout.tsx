@@ -9,6 +9,7 @@ import CartProvider from "@/app/context/CartContext";
 import type {Metadata} from 'next'
 
 import {Bangers, Quicksand, Roboto_Condensed} from 'next/font/google'
+import Footer from "@/app/components/Footer";
 
 
 const quicksand = Quicksand({
@@ -52,6 +53,7 @@ export default function RootLayout({
             <CartMobile/>
             {children}
             <CartDesktop/>
+            <Footer/>
             </body>
             </html>
         </CartProvider>

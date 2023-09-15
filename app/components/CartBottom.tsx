@@ -15,10 +15,11 @@ const modalStyles = {
 }
 Modal.setAppElement('body')
 
+
 const CartBottom = () => {
 
 
-    const {cart, cartTotal} = useContext<any>(CartContext)
+    const {cart, cartTotal, setIsOpen} = useContext<any>(CartContext)
 
     const [modal, setModal] = useState(false)
 
@@ -30,14 +31,18 @@ const CartBottom = () => {
         setModal(false)
     }
 
-    return <>{cart.length >= 1 ? <div>
-            <div className='px-6 py-3 lg:py-6 mt-auto text-lg font-semibold font-robotoCondensed'>
+    const closeCartShop = () => {
+        setIsOpen(false)
+    }
+
+    return <>{cart.length >= 1 ? <div className="px-6 py-3 lg:py-6 mt-auto">
+            <div className='flex justify-between items-center mb-6 text-lg font-semibold font-robotoCondensed'>
                 <div>Total:</div>
                 <div>$ {parseFloat(cartTotal).toFixed(2)}</div>
             </div>
             <div className='flex flex-col gap-y-3'>
                 <button
-                    onClick={openModal}
+                    onClick={() => {openModal(); closeCartShop()}}
                     className='btn btn-lg gradient font-semibold flex justify-center'>
                     Checkout
                 </button>
@@ -58,7 +63,8 @@ const CartBottom = () => {
                         className='absolute z-30 right-2 top-2 hover:scale-110 duration-300 transition-all cursor-pointer'>
                         <IoCloseOutline className='text-4xl text-orange'/>
                     </div>
-                    <CheckoutDetails setModal={setModal}/>
+                    <CheckoutDetails
+                        setModal={setModal}/>
                 </Modal>
             )}
     </>
