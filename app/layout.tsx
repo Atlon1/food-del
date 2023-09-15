@@ -27,9 +27,8 @@ const robotoCondensed = Roboto_Condensed({
 
 
 
-export default function RootLayout({children}: {
-    children: React.ReactNode
-}) {
+// @ts-ignore
+export default function RootLayout({children}) {
     return (
         <CartProvider>
             <html lang="en">
