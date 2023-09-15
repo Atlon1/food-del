@@ -26,7 +26,7 @@ const robotoCondensed = Roboto_Condensed({
 });
 
 type Children = {
-    children: React.ReactNode
+    children: any
 }
 
 
