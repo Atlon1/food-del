@@ -20,7 +20,10 @@ const Nav = () => {
                 </Link>
                 <div className='flex gap-x-8 items-center'>
                     <div className='flex gap-x-3 items-center'>
-                        <Image src={'phone.svg'} alt='phone' width={42} height={42}/>
+                        <Image src={'phone.svg'}
+                               alt='phone'
+                               width={42}
+                               height={42}/>
                         <div className='text-white'>
                             <div className='font-robotoCondensed uppercase font-medium leading-none text-sm'>24/7 Pizza delivery service</div>
                             <div className='text-3xl font-robotoCondensed  font-extrabold leading-none tracking-wide'>920 234 5768</div>

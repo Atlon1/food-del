@@ -25,14 +25,18 @@ const robotoCondensed = Roboto_Condensed({
     weight: ['300', '400', '700'],
 });
 
+type Children = {
+    children: React.ReactNode
+}
 
 
-// @ts-ignore
-export default function RootLayout({children}) {
+export default function RootLayout({children} : Children) {
     return (
         <CartProvider>
             <html lang="en">
-            <body className={`${quicksand.variable} ${bangers.variable} ${robotoCondensed.variable}
+            <body
+                suppressHydrationWarning={true}
+                className={`${quicksand.variable} ${bangers.variable} ${robotoCondensed.variable}
         font-quicksand
       `}>
 
