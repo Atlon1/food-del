@@ -5,7 +5,11 @@ import {CartContext} from "@/app/context/CartContext";
 interface DetailsProps {
     setModal: React.Dispatch<React.SetStateAction<any>>
 }
-
+type Pizza = {
+    name:string
+    amount: number
+    price: number
+}
 const CheckoutDetails: FC<DetailsProps> = ({setModal}) => {
 
     const {cart, setCart, cartTotal} = useContext<any>(CartContext)
@@ -74,8 +78,27 @@ const CheckoutDetails: FC<DetailsProps> = ({setModal}) => {
 
 
                     <div
-                        className='bg-yellow-400 flex-1 h-full lg:max-w-[40%] flex flex-col justify-between pt-3 px-8 lg:p-0'>
-
+                        className='flex-1 h-full lg:max-w-[40%] flex flex-col justify-between pt-3 px-8 lg:p-0'>
+                        <div className='border rounded-lg flex flex-col mb-4 p-4'>
+                            <h3 className='text-base font-extrabold uppercase mb-4 border-b pb-4'>Your order</h3>
+                            <div className='overflow-y-scroll overflow-hidden scrollbar-thin scrollbar-thumb-gray-200 scrollbar-track-white-500 font-semibold flex flex-col gap-y-4 h-[240px] py-2'>
+                                {cart.map((pizza : Pizza, index: number) => {
+                                    return(
+                                        <div key={index}
+                                        className = 'flex justify-between text-[15px]'
+                                        >
+                                            <div className='flex gap-x-2'>
+                                                <div className='capitalize'>{pizza.name}</div>
+                                                <div>{pizza.amount > 1 && `x ${pizza.amount}`}</div>
+                                            </div>
+                                            <div>
+                                               $ {parseFloat(String(pizza.price * pizza.amount)).toFixed(2)}
+                                            </div>
+                                        </div>
+                                    )
+                                })}
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
