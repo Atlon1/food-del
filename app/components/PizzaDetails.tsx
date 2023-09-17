@@ -12,7 +12,7 @@ interface pizzaType {
     setModal: any;
 }
 
-const PizzaDetails: FC<pizzaType> = ({pizza, modal, setModal}) => {
+const PizzaDetails: FC<pizzaType> = ({pizza, setModal}) => {
 
     const [size, setSize] = useState('medium');
     const [crust, setCrust] = useState('traditional');
@@ -34,7 +34,7 @@ const PizzaDetails: FC<pizzaType> = ({pizza, modal, setModal}) => {
             setPrice(parseFloat((pizza.priceLg + additionalToppingPrice).toFixed(2)));
         }
 
-    }, [size, additionalToppingPrice]);
+    }, [size, additionalToppingPrice, pizza.priceSm, pizza.priceMd, pizza.priceLg]);
 
 
     useEffect(() => {
@@ -106,7 +106,7 @@ const PizzaDetails: FC<pizzaType> = ({pizza, modal, setModal}) => {
                                 additionalTopping,
                                 size,
                                 crust
-                            ),
+                            )
                                 setModal(false)
                         }
                         }
