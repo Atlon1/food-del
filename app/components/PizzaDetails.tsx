@@ -86,7 +86,6 @@ const PizzaDetails: FC<pizzaType> = ({pizza, setModal}) => {
                         </div>
                         <div className='flex flex-1 flex-wrap gap-2 py-1 justify-center lg:justify-start'>
                             {pizza.toppings?.map((topping: string, index: number) => {
-                                // @ts-ignore
                                 return <Topping topping={topping}
                                                 additionalTopping={additionalTopping}
                                                 setAdditionalTopping={setAdditionalTopping}
