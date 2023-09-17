@@ -1,4 +1,4 @@
-import React, {ReactNode} from "react";
+import React from "react";
 import './globals.css'
 import Nav from './components/Nav'
 import CartMobileIcon from "@/app/components/CartMobileIcon";
@@ -25,12 +25,10 @@ const robotoCondensed = Roboto_Condensed({
     weight: ['300', '400', '700'],
 });
 
-type Children = {
-    children?: ReactNode
-}
 
 
-export default function RootLayout({children,}: { children: React.ReactNode }) {
+
+export default function RootLayout({children}: { children: React.ReactNode }) {
     return (
         <CartProvider>
             <html lang="en">
