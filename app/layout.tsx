@@ -1,13 +1,14 @@
 import React from "react";
-import './globals.css'
-import Nav from './components/Nav'
+import './globals.css';
+import Nav from './components/Nav';
 import CartMobileIcon from "@/app/components/CartMobileIcon";
 import CartDesktop from "@/app/components/CartDesktop";
-import CartMobile from "@/app/components/CartMobile"
+import CartMobile from "@/app/components/CartMobile";
 import CartProvider from "@/app/context/CartContext";
-import {Bangers, Quicksand, Roboto_Condensed} from 'next/font/google'
+import {Bangers, Quicksand, Roboto_Condensed} from 'next/font/google';
 import Footer from "@/app/components/Footer";
 
+// Define font variables
 const quicksand = Quicksand({
     subsets: ['latin'],
     variable: '--font-quicksand'
@@ -26,11 +27,10 @@ const robotoCondensed = Roboto_Condensed({
 });
 
 
-
-
-export default function RootLayout({children}: { children: React.ReactNode }) {
+const RootLayout = ({children}: { children: React.ReactNode }) => {
     return (
         <CartProvider>
+
             <html lang="en">
             <head>
                 <title>Pizza land</title>
@@ -39,9 +39,8 @@ export default function RootLayout({children}: { children: React.ReactNode }) {
             </head>
             <body
                 suppressHydrationWarning={true}
-                className={`${quicksand.variable} ${bangers.variable} ${robotoCondensed.variable}
-        font-quicksand
-      `}>
+                className={`${quicksand.variable} ${bangers.variable} ${robotoCondensed.variable} font-quicksand`}
+            >
 
             <Nav/>
             <CartMobileIcon/>
@@ -52,5 +51,7 @@ export default function RootLayout({children}: { children: React.ReactNode }) {
             </body>
             </html>
         </CartProvider>
-    )
-}
+    );
+};
+
+export default RootLayout;
