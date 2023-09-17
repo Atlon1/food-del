@@ -33,7 +33,7 @@ const Topping: FC<toppingProps> = ({topping, additionalTopping, setAdditionalTop
 
     useEffect(() => {
         handleTopping()
-    }, [isChecked]);
+    }, [handleTopping, isChecked]);
 
 
     return (
