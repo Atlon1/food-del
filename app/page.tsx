@@ -5,13 +5,13 @@ import Pizza from './components/Pizza';
 import Banner from './components/Banner';
 
 
-interface Topping {
+type Topping = {
     image: string;
     name: string;
     price: number;
 }
 
-interface Pizza {
+type Pizza = {
     id: number;
     name: string;
     description: string;
@@ -397,7 +397,7 @@ const pizzas: Pizza[] = [
     },
 ];
 
-const Home: React.FC = () => {
+const Home = () => {
 
     return (
         <section>

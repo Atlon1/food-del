@@ -1,5 +1,5 @@
 
-interface addToCartProps {
+export type addToCartProps = {
     id:number,
     image:string,
     name:string,

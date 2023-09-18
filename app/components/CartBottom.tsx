@@ -15,6 +15,12 @@ const modalStyles = {
 }
 Modal.setAppElement('body')
 
+type ContextCartBottom = {
+    cart: any
+    cartTotal: number
+    setIsOpen: () => void
+}
+
 
 const CartBottom = () => {
 

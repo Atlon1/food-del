@@ -1,18 +1,19 @@
 'use client'
-import React, {createContext, FC, useState, ReactNode, useEffect} from "react";
+import React, {createContext, useState, ReactNode, useEffect} from "react";
 import {CartContextType} from "@/app/@types/context";
 
-interface ChildrenProps {
+type ChildrenProps ={
     children: ReactNode;
 }
 
 export const CartContext = createContext<CartContextType | null>(null);
 
-const CartProvider: FC<ChildrenProps> = ({children}) => {
-    const [isOpen, setIsOpen] = useState<boolean>(false);
+const CartProvider = ({children} : ChildrenProps) => {
+
+    const [isOpen, setIsOpen] = useState(false);
     const [cart, setCart] = useState<any[]>([]);
-    const [cartTotal, setCartTotal] = useState<number>(0)
-    const [itemAmount, setItemAmount] = useState<number>(0)
+    const [cartTotal, setCartTotal] = useState(0)
+    const [itemAmount, setItemAmount] = useState(0)
 
     useEffect(()=> {
         const amount = cart.reduce((a: number, b: any)=> {
