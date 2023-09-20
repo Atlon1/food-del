@@ -1,15 +1,14 @@
 import React, { useContext, useEffect, useState} from "react";
-import {CartContext, CartContextType} from "@/app/context/CartContext";
+import {CartContext, CartItem} from "@/app/context/CartContext";
 import Image from "next/image";
 
 
 type DetailsProps  = {
     setModal: React.Dispatch<React.SetStateAction<boolean>>
 }
-
 const CheckoutDetails  = ({setModal} : DetailsProps) => {
 
-    const {cart, setCart} = useContext<CartContextType>(CartContext)
+    const {cart, setCart} = useContext<any>(CartContext)
     const [successMsg, setSuccessMsg] = useState(false)
     const [count, setCount] = useState(5)
 
@@ -114,7 +113,7 @@ const CheckoutDetails  = ({setModal} : DetailsProps) => {
                                 <h3 className='text-base font-extrabold uppercase mb-4 border-b pb-4'>Your order</h3>
                                 <div
                                     className='overflow-y-scroll overflow-hidden scrollbar-thin scrollbar-thumb-gray-200 scrollbar-track-white-500 font-semibold flex flex-col gap-y-4 h-[240px] py-2'>
-                                    {cart.map((pizza, index) => {
+                                    {cart.map((pizza: CartItem, index: number) => {
                                         return (
                                             <div key={index}
                                                  className='flex justify-between text-[15px]'
