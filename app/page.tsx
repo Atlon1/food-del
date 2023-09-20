@@ -1,6 +1,5 @@
 import React from 'react';
 
-// import components
 import Pizza from './components/Pizza';
 import Banner from './components/Banner';
 
@@ -23,7 +22,6 @@ export type Pizza = {
 }
 
 
-// pizza data
 const pizzas: Pizza[] = [
     {
         id: 1,

@@ -1,4 +1,4 @@
-import React, {FC, useState, useEffect, useContext} from "react";
+import React, {useState, useEffect, useContext} from "react";
 import Image from "next/image";
 
 import SizeSelection from "@/app/components/SizeSelection";
@@ -6,13 +6,13 @@ import CrustSelection from "@/app/components/CrustSelection";
 import Topping from "@/app/components/Topping";
 import {CartContext} from "@/app/context/CartContext";
 
-interface pizzaType {
+type pizzaType = {
     pizza: any;
-    modal: any;
+    modal: boolean;
     setModal: any;
 }
 
-const PizzaDetails: FC<pizzaType> = ({pizza, setModal}) => {
+const PizzaDetails = ({pizza, setModal} : pizzaType) => {
 
     const [size, setSize] = useState('medium');
     const [crust, setCrust] = useState('traditional');

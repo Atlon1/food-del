@@ -25,15 +25,16 @@ export type CartItem = {
 
 
 export type CartContextType = {
-    isOpen: boolean;
-    setIsOpen:  React.Dispatch<React.SetStateAction<boolean>>;
-    cart: CartItem[];
-    itemAmount: number;
-    cartTotal: number;
-    addToCart: (item: CartItem) => void;
-    removeItem: (id: number, price: number, crust: string) => void;
-    increaseAmount: (id: number, price: number) => void;
-    decreaseAmount: (id: number, price: number) => void;
+    isOpen?: boolean;
+    setIsOpen?:  React.Dispatch<React.SetStateAction<boolean>>;
+    cart?: CartItem[];
+    itemAmount?: number;
+    cartTotal?: number;
+    addToCart?: (item: CartItem) => void;
+    setCart?:  React.Dispatch<React.SetStateAction<CartItem[]>>
+    removeItem?: (id: number, price: number, crust: string) => void;
+    increaseAmount?: (id: number, price: number) => void;
+    decreaseAmount?: (id: number, price: number) => void;
 };
 
 export const CartContext = createContext<CartContextType | null>(null);
@@ -59,7 +60,6 @@ const CartProvider = ({children} : ChildrenProps) => {
         setCartTotal(price)
     },[cart])
 
-console.log(cart)
     const addToCart = (
         id: number,
         image: string,
@@ -102,7 +102,7 @@ console.log(cart)
     };
 
     const removeItem = (id: number, price: number, crust: string) => {
-        const itemIndex = cart.findIndex((item: any) => (
+        const itemIndex = cart.findIndex((item: CartItem) => (
             item.id === id &&
             item.price === price &&
             item.crust === crust
@@ -143,18 +143,24 @@ console.log(cart)
     }
 
 
+
+
+
     return (
-        <CartContext.Provider value={{
-            isOpen,
-            setIsOpen,
-            addToCart,
-            cart,
-            setCart,
-            removeItem,
-            increaseAmount,
-            decreaseAmount,
-            itemAmount,
-            cartTotal}}>
+        <CartContext.Provider
+            value={{
+                isOpen,
+                setIsOpen,
+                // @ts-ignore
+                addToCart,
+                cart,
+                itemAmount,
+                cartTotal,
+                removeItem,
+                increaseAmount,
+                decreaseAmount,
+            }}
+        >
             {children}
         </CartContext.Provider>
     );

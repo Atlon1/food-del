@@ -76,7 +76,7 @@ const CartItem: FC<CartItemProps> = ({pizza}) => {
                     Toppings: {pizza.additionalTopping.length === 0 && 'None'}
                 </div>
                 {
-                    pizza.additionalTopping.map((topping: any, index: number) => {
+                    pizza.additionalTopping.map((topping, index) => {
                         return <div
                             className='capitalize text-sm gradient font-medium px-3 py-1 rounded-full leading-none'
                             key={index}>
