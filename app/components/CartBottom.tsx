@@ -6,7 +6,7 @@ import CheckoutDetails from "@/app/components/CheckoutDetails";
 
 import Modal from "react-modal";
 
-import {CartContext} from "@/app/context/CartContext";
+import {CartContext, CartItem} from "@/app/context/CartContext";
 
 const modalStyles = {
     overlay: {
@@ -15,17 +15,18 @@ const modalStyles = {
 }
 Modal.setAppElement('body')
 
+
 type ContextCartBottom = {
-    cart: any
+    cart: CartItem[]
     cartTotal: number
-    setIsOpen: () => void
+    setIsOpen: React.Dispatch<React.SetStateAction<boolean>>
 }
 
 
 const CartBottom = () => {
 
 
-    const {cart, cartTotal, setIsOpen} = useContext<any>(CartContext)
+    const {cart, cartTotal, setIsOpen} = useContext<ContextCartBottom>(CartContext)
 
     const [modal, setModal] = useState(false)
 

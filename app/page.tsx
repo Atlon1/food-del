@@ -5,13 +5,13 @@ import Pizza from './components/Pizza';
 import Banner from './components/Banner';
 
 
-type Topping = {
+export type Topping = {
     image: string;
     name: string;
     price: number;
 }
 
-type Pizza = {
+export type Pizza = {
     id: number;
     name: string;
     description: string;

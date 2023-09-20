@@ -1,17 +1,47 @@
 'use client'
 import React, {createContext, useState, ReactNode, useEffect} from "react";
-import {CartContextType} from "@/app/@types/context";
 
-type ChildrenProps ={
+
+type ChildrenProps = {
     children: ReactNode;
-}
+};
+
+export type Topping = {
+    image: string;
+    name: string;
+    price: number;
+};
+
+export type CartItem = {
+    id: number;
+    image: string;
+    name: string;
+    price: number;
+    additionalTopping: Topping[];
+    size: string;
+    crust: string;
+    amount: number;
+};
+
+
+export type CartContextType = {
+    isOpen: boolean;
+    setIsOpen:  React.Dispatch<React.SetStateAction<boolean>>;
+    cart: CartItem[];
+    itemAmount: number;
+    cartTotal: number;
+    addToCart: (item: CartItem) => void;
+    removeItem: (id: number, price: number, crust: string) => void;
+    increaseAmount: (id: number, price: number) => void;
+    decreaseAmount: (id: number, price: number) => void;
+};
 
 export const CartContext = createContext<CartContextType | null>(null);
 
 const CartProvider = ({children} : ChildrenProps) => {
 
     const [isOpen, setIsOpen] = useState(false);
-    const [cart, setCart] = useState<any[]>([]);
+    const [cart, setCart] = useState<CartItem[]>([]);
     const [cartTotal, setCartTotal] = useState(0)
     const [itemAmount, setItemAmount] = useState(0)
 
@@ -29,17 +59,17 @@ const CartProvider = ({children} : ChildrenProps) => {
         setCartTotal(price)
     },[cart])
 
-
+console.log(cart)
     const addToCart = (
         id: number,
         image: string,
         name: string,
-        price: any,
-        additionalTopping: any,
+        price: number,
+        additionalTopping: Topping[],
         size: string,
         crust: string
     ) => {
-        additionalTopping.sort((a: any, b: any) => a.name.localeCompare(b.name));
+        additionalTopping.sort((a, b) => a.name.localeCompare(b.name));
 
         const newItem = {
             id,
@@ -52,7 +82,7 @@ const CartProvider = ({children} : ChildrenProps) => {
             amount: 1,
         };
 
-        const cartItemIndex = cart.findIndex((item: any) => (
+        const cartItemIndex = cart.findIndex((item: CartItem) => (
             item.id === id &&
             item.price === price &&
             item.size === size &&
@@ -114,8 +144,17 @@ const CartProvider = ({children} : ChildrenProps) => {
 
 
     return (
-        // @ts-ignore
-        <CartContext.Provider value={{isOpen, setIsOpen, addToCart, cart, setCart, removeItem, increaseAmount, decreaseAmount, itemAmount, cartTotal}}>
+        <CartContext.Provider value={{
+            isOpen,
+            setIsOpen,
+            addToCart,
+            cart,
+            setCart,
+            removeItem,
+            increaseAmount,
+            decreaseAmount,
+            itemAmount,
+            cartTotal}}>
             {children}
         </CartContext.Provider>
     );
