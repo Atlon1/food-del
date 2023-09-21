@@ -31,7 +31,6 @@ export type CartContextType = {
     itemAmount?: number;
     cartTotal?: number;
     addToCart?: (item: CartItem) => void;
-    setCart?:  React.Dispatch<React.SetStateAction<CartItem[]>>
     removeItem?: (id: number, price: number, crust: string) => void;
     increaseAmount?: (id: number, price: number) => void;
     decreaseAmount?: (id: number, price: number) => void;
