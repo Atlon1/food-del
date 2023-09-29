@@ -41,7 +41,7 @@ export const CartContext = createContext<CartContextType | null>(null);
 const CartProvider = ({children} : ChildrenProps) => {
 
     const [isOpen, setIsOpen] = useState(false);
-    const [cart, setCart] = useState<CartItem[]>([]);
+    const [cart, setCart] = useState<any>([]);
     const [cartTotal, setCartTotal] = useState(0)
     const [itemAmount, setItemAmount] = useState(0)
 
@@ -114,7 +114,7 @@ const CartProvider = ({children} : ChildrenProps) => {
     }
 
     const increaseAmount = (id: number, price: number) => {
-        const itemIndex = cart.findIndex((item) => (
+        const itemIndex = cart.findIndex((item: any) => (
             item.id === id &&
             item.price === price
         ))
@@ -127,7 +127,7 @@ const CartProvider = ({children} : ChildrenProps) => {
     }
 
     const decreaseAmount = (id: number, price: number) => {
-        const itemIndex = cart.findIndex((item) => (
+        const itemIndex = cart.findIndex((item : any) => (
             item.id === id &&
             item.price === price
         ))
