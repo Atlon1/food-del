@@ -6,6 +6,7 @@ import {MouseParallaxContainer, MouseParallaxChild} from 'react-parallax-mouse'
 import Image from "next/image";
 
 
+
 const Banner = () => {
     return <section className='bg-primary bg-pattern lg:min-h-[768px] pt-16 lg:pt-16'>
         <div className='container mx-auto min-h-[768px] flex items-center justify-center'>
