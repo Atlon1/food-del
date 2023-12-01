@@ -5,6 +5,8 @@ import React from "react";
 import {MouseParallaxContainer, MouseParallaxChild} from 'react-parallax-mouse'
 import Image from "next/image";
 
+import banner from '../assets/pizza-banner.png'
+
 
 
 const Banner = () => {
@@ -39,13 +41,14 @@ const Banner = () => {
                 >
                     <div className='flex flex-col lg:flex-row items-center text-center lg:text-left flex-1 px-6'>
                         <div className='flex-1 flex justify-end max-w-sm lg:max-w-max'>
-                            <Image
-                                src={'/pizza-banner.png'}
-                                alt="banner"
-                                width={550}
-                                height={558}
-                                priority={true}
-                            />
+                            {/*<Image*/}
+                            {/*    src={'/pizza-banner.png'}*/}
+                            {/*    alt="banner"*/}
+                            {/*    width={550}*/}
+                            {/*    height={558}*/}
+                            {/*    priority={true}*/}
+                            {/*/>*/}
+                            <img className='w-[550] h-[558]' src={banner.src} alt='chilli'/>
                         </div>
                     </div>
                     <MouseParallaxChild
