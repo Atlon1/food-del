@@ -4,6 +4,20 @@ import Pizza from './components/Pizza';
 import Banner from './components/Banner';
 
 import capricciossa from '../app/assets/capricciosa.webp';
+import cheesy from '../app/assets/cheesy.webp';
+import hawaii from '../app/assets/hawaii.webp';
+import italian from '../app/assets/italian.webp';
+import margherita from '../app/assets/margherita.webp';
+import pepperoni from '../app/assets/pepperoni.webp';
+import quattroFormaggi from '../app/assets/quattro-formaggi.webp';
+import quattroStagioni from '../app/assets/quattro-stagioni.webp';
+import tonno from '../app/assets/tonno.webp';
+import vegetarian from '../app/assets/vegetarian.webp'
+import cherry from '../app/assets/cherry.png'
+import corn from '../app/assets/corn.png'
+import freshTomatoes from '../app/assets/fresh-tomatoes.png'
+import jalpeno from '../app/assets/jalapeno.png'
+import parmesan from '../app/assets/parmesan.png'
 
 
 export type Topping = {
@@ -36,27 +50,27 @@ const pizzas: Pizza[] = [
         priceLg: 11.99,
         toppings: [
             {
-                image: '/cherry.png',
+                image: cherry,
                 name: 'cherry tomatoes',
                 price: 2,
             },
             {
-                image: '/corn.png',
+                image: corn,
                 name: 'corn',
                 price: 2,
             },
             {
-                image: '/fresh-tomatoes.png',
+                image: freshTomatoes,
                 name: 'fresh tomatoes',
                 price: 2,
             },
             {
-                image: '/jalapeno.png',
+                image: jalpeno,
                 name: 'jalapeno',
                 price: 2,
             },
             {
-                image: '/parmesan.png',
+                image: parmesan,
                 name: 'parmesan',
                 price: 2,
             },
@@ -67,33 +81,33 @@ const pizzas: Pizza[] = [
         name: 'cheesy',
         description:
             'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia recusandae dolorum enim eveniet. Mollitia laudantium, sunt blanditiis ratione quam delectus.',
-        image: '/cheesy.webp',
+        image: cheesy,
         priceSm: 10.99,
         priceMd: 11.99,
         priceLg: 12.99,
         toppings: [
             {
-                image: '/cherry.png',
+                image: cherry,
                 name: 'cherry tomatoes',
                 price: 2,
             },
             {
-                image: '/corn.png',
+                image: corn,
                 name: 'corn',
                 price: 2,
             },
             {
-                image: '/fresh-tomatoes.png',
+                image: freshTomatoes,
                 name: 'fresh tomatoes',
                 price: 2,
             },
             {
-                image: '/jalapeno.png',
+                image: jalpeno,
                 name: 'jalapeno',
                 price: 2,
             },
             {
-                image: '/parmesan.png',
+                image: parmesan,
                 name: 'parmesan',
                 price: 2,
             },
@@ -104,33 +118,33 @@ const pizzas: Pizza[] = [
         name: 'hawaii',
         description:
             'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia recusandae dolorum enim eveniet. Mollitia laudantium, sunt blanditiis ratione quam delectus.',
-        image: '/hawaii.webp',
+        image: hawaii,
         priceSm: 10.99,
         priceMd: 11.99,
         priceLg: 12.99,
         toppings: [
             {
-                image: '/cherry.png',
+                image: cherry,
                 name: 'cherry tomatoes',
                 price: 2,
             },
             {
-                image: '/corn.png',
+                image: corn,
                 name: 'corn',
                 price: 2,
             },
             {
-                image: '/fresh-tomatoes.png',
+                image: freshTomatoes,
                 name: 'fresh tomatoes',
                 price: 2,
             },
             {
-                image: '/jalapeno.png',
+                image: jalpeno,
                 name: 'jalapeno',
                 price: 2,
             },
             {
-                image: '/parmesan.png',
+                image: parmesan,
                 name: 'parmesan',
                 price: 2,
             },
@@ -141,33 +155,33 @@ const pizzas: Pizza[] = [
         name: 'italian',
         description:
             'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia recusandae dolorum enim eveniet. Mollitia laudantium, sunt blanditiis ratione quam delectus.',
-        image: '/italian.webp',
+        image: italian,
         priceSm: 11.99,
         priceMd: 12.99,
         priceLg: 13.99,
         toppings: [
             {
-                image: '/cherry.png',
+                image: cherry,
                 name: 'cherry tomatoes',
                 price: 2,
             },
             {
-                image: '/corn.png',
+                image: corn,
                 name: 'corn',
                 price: 2,
             },
             {
-                image: '/fresh-tomatoes.png',
+                image: freshTomatoes,
                 name: 'fresh tomatoes',
                 price: 2,
             },
             {
-                image: '/jalapeno.png',
+                image: jalpeno,
                 name: 'jalapeno',
                 price: 2,
             },
             {
-                image: '/parmesan.png',
+                image: parmesan,
                 name: 'parmesan',
                 price: 2,
             },
@@ -178,33 +192,33 @@ const pizzas: Pizza[] = [
         name: 'margherita',
         description:
             'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia recusandae dolorum enim eveniet. Mollitia laudantium, sunt blanditiis ratione quam delectus.',
-        image: '/margherita.webp',
+        image: margherita,
         priceSm: 9.99,
         priceMd: 10.99,
         priceLg: 11.99,
         toppings: [
             {
-                image: '/cherry.png',
+                image: cherry,
                 name: 'cherry tomatoes',
                 price: 2,
             },
             {
-                image: '/corn.png',
+                image: corn,
                 name: 'corn',
                 price: 2,
             },
             {
-                image: '/fresh-tomatoes.png',
+                image: freshTomatoes,
                 name: 'fresh tomatoes',
                 price: 2,
             },
             {
-                image: '/jalapeno.png',
+                image: jalpeno,
                 name: 'jalapeno',
                 price: 2,
             },
             {
-                image: '/parmesan.png',
+                image: parmesan,
                 name: 'parmesan',
                 price: 2,
             },
@@ -215,33 +229,33 @@ const pizzas: Pizza[] = [
         name: 'pepperoni',
         description:
             'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia recusandae dolorum enim eveniet. Mollitia laudantium, sunt blanditiis ratione quam delectus.',
-        image: '/pepperoni.webp',
+        image: pepperoni,
         priceSm: 10.99,
         priceMd: 11.99,
         priceLg: 12.99,
         toppings: [
             {
-                image: '/cherry.png',
+                image: cherry,
                 name: 'cherry tomatoes',
                 price: 2,
             },
             {
-                image: '/corn.png',
+                image: corn,
                 name: 'corn',
                 price: 2,
             },
             {
-                image: '/fresh-tomatoes.png',
+                image: freshTomatoes,
                 name: 'fresh tomatoes',
                 price: 2,
             },
             {
-                image: '/jalapeno.png',
+                image: jalpeno,
                 name: 'jalapeno',
                 price: 2,
             },
             {
-                image: '/parmesan.png',
+                image: parmesan,
                 name: 'parmesan',
                 price: 2,
             },
@@ -252,33 +266,33 @@ const pizzas: Pizza[] = [
         name: 'quattro formaggi',
         description:
             'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia recusandae dolorum enim eveniet. Mollitia laudantium, sunt blanditiis ratione quam delectus.',
-        image: '/quattro-formaggi.webp',
+        image: quattroFormaggi,
         priceSm: 12.99,
         priceMd: 13.99,
         priceLg: 14.99,
         toppings: [
             {
-                image: '/cherry.png',
+                image: cherry,
                 name: 'cherry tomatoes',
                 price: 2,
             },
             {
-                image: '/corn.png',
+                image: corn,
                 name: 'corn',
                 price: 2,
             },
             {
-                image: '/fresh-tomatoes.png',
+                image: freshTomatoes,
                 name: 'fresh tomatoes',
                 price: 2,
             },
             {
-                image: '/jalapeno.png',
+                image: jalpeno,
                 name: 'jalapeno',
                 price: 2,
             },
             {
-                image: '/parmesan.png',
+                image: parmesan,
                 name: 'parmesan',
                 price: 2,
             },
@@ -289,33 +303,33 @@ const pizzas: Pizza[] = [
         name: 'quattro stagioni',
         description:
             'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia recusandae dolorum enim eveniet. Mollitia laudantium, sunt blanditiis ratione quam delectus.',
-        image: '/quattro-stagioni.webp',
+        image: quattroStagioni,
         priceSm: 11.99,
         priceMd: 12.99,
         priceLg: 13.99,
         toppings: [
             {
-                image: '/cherry.png',
+                image: cherry,
                 name: 'cherry tomatoes',
                 price: 2,
             },
             {
-                image: '/corn.png',
+                image: corn,
                 name: 'corn',
                 price: 2,
             },
             {
-                image: '/fresh-tomatoes.png',
+                image: freshTomatoes,
                 name: 'fresh tomatoes',
                 price: 2,
             },
             {
-                image: '/jalapeno.png',
+                image: jalpeno,
                 name: 'jalapeno',
                 price: 2,
             },
             {
-                image: '/parmesan.png',
+                image: parmesan,
                 name: 'parmesan',
                 price: 2,
             },
@@ -326,33 +340,33 @@ const pizzas: Pizza[] = [
         name: 'tonno',
         description:
             'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia recusandae dolorum enim eveniet. Mollitia laudantium, sunt blanditiis ratione quam delectus.',
-        image: '/tonno.webp',
+        image: tonno,
         priceSm: 10.99,
         priceMd: 11.99,
         priceLg: 12.99,
         toppings: [
             {
-                image: '/cherry.png',
+                image: cherry,
                 name: 'cherry tomatoes',
                 price: 2,
             },
             {
-                image: '/corn.png',
+                image: corn,
                 name: 'corn',
                 price: 2,
             },
             {
-                image: '/fresh-tomatoes.png',
+                image: freshTomatoes,
                 name: 'fresh tomatoes',
                 price: 2,
             },
             {
-                image: '/jalapeno.png',
+                image: jalpeno,
                 name: 'jalapeno',
                 price: 2,
             },
             {
-                image: '/parmesan.png',
+                image: parmesan,
                 name: 'parmesan',
                 price: 2,
             },
@@ -363,33 +377,33 @@ const pizzas: Pizza[] = [
         name: 'vegetarian',
         description:
             'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia recusandae dolorum enim eveniet. Mollitia laudantium, sunt blanditiis ratione quam delectus.',
-        image: '/vegetarian.webp',
+        image: vegetarian,
         priceSm: 9.99,
         priceMd: 10.99,
         priceLg: 11.99,
         toppings: [
             {
-                image: '/cherry.png',
+                image: cherry,
                 name: 'cherry tomatoes',
                 price: 2,
             },
             {
-                image: '/corn.png',
+                image: corn,
                 name: 'corn',
                 price: 2,
             },
             {
-                image: '/fresh-tomatoes.png',
+                image: freshTomatoes,
                 name: 'fresh tomatoes',
                 price: 2,
             },
             {
-                image: '/jalapeno.png',
+                image: jalpeno,
                 name: 'jalapeno',
                 price: 2,
             },
             {
-                image: '/parmesan.png',
+                image: parmesan,
                 name: 'parmesan',
                 price: 2,
             },
