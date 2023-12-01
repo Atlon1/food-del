@@ -6,6 +6,13 @@ import {MouseParallaxContainer, MouseParallaxChild} from 'react-parallax-mouse'
 import Image from "next/image";
 
 import banner from '../assets/pizza-banner.png'
+import chilli1 from '../assets/chilli-1.png'
+import chilli2 from '../assets/chilli-2.png'
+import garlic1 from '../assets/garlic-1.png'
+import garlic2 from '../assets/garlic-2.png'
+import garlic3 from '../assets/garlic-3.png'
+import leaves1 from '../assets/leaves.png'
+
 
 
 
@@ -41,13 +48,6 @@ const Banner = () => {
                 >
                     <div className='flex flex-col lg:flex-row items-center text-center lg:text-left flex-1 px-6'>
                         <div className='flex-1 flex justify-end max-w-sm lg:max-w-max'>
-                            {/*<Image*/}
-                            {/*    src={'/pizza-banner.png'}*/}
-                            {/*    alt="banner"*/}
-                            {/*    width={550}*/}
-                            {/*    height={558}*/}
-                            {/*    priority={true}*/}
-                            {/*/>*/}
                             <img className='w-[550] h-[558]' src={banner.src} alt='chilli'/>
                         </div>
                     </div>
@@ -56,74 +56,43 @@ const Banner = () => {
                         factorY={0.3}
                         className='absolute top-6 left-4 hidden xl:flex'
                     >
-                        <Image
-                            src={`/chilli-1.png`}
-                            width={160}
-                            height={84}
-                            alt='chilli'
-                            priority={true}/>
+                        <img className='w-[160px] h-[84px]' src={chilli1.src} alt='chilli1'/>
                     </MouseParallaxChild>
                     <MouseParallaxChild
                         factorX={0.4}
                         factorY={0.4}
                         className='absolute top-16 -left-4 hidden xl:flex'
                     >
-                        <Image
-                            src={`/chilli-2.png`}
-                            width={160}
-                            height={84}
-                            alt='chilli2'
-                            priority={true}/>
+                        <img className='w-[160px] h-[84px]' src={chilli2.src} alt='chilli2'/>
                     </MouseParallaxChild>
                     <MouseParallaxChild
                         factorX={0.6}
                         factorY={0.6}
                         className='absolute top-80 -left-24 hidden xl:flex'
                     >
-                        <Image
-                            src={`/garlic-1.png`}
-                            width={84}
-                            height={72}
-                            alt='garlic1'
-                            priority={true}/>
+                        <img className='w-[160px] h-[84px]' src={garlic1.src} alt='garlic1'/>
                     </MouseParallaxChild>
                     <MouseParallaxChild
                         factorX={0.3}
                         factorY={0.6}
                         className='absolute top-[22rem] -left-8 hidden xl:flex'
                     >
-                        <Image
-                            src={`/garlic-2.png`}
-                            width={100}
-                            height={72}
-                            alt='garlic2'
-                            priority={true}/>
+                        <img className='w-[160px] h-[84px]' src={garlic2.src} alt='garlic2'/>
                     </MouseParallaxChild>
                     <MouseParallaxChild
                         factorX={0.4}
                         factorY={1}
                         className='absolute top-96 -left-20 hidden xl:flex'
                     >
-                        <Image
-                            src={`/garlic-3.png`}
-                            width={100}
-                            height={72}
-                            alt='garlic3'
-                            priority={true}/>
+                        <img className='w-[160px] h-[84px]' src={garlic3.src} alt='garlic3'/>
                     </MouseParallaxChild>
                     <MouseParallaxChild
                         factorX={0.2}
                         factorY={0.2}
                         className='absolute top-96 left-12 hidden xl:flex'
                     >
-                        <Image
-                            src={`/leaves.png`}
-                            width={180}
-                            height={72}
-                            alt='leaves'
-                            priority={true}/>
+                        <img className='w-[160px] h-[84px]' src={leaves1.src} alt='leaves'/>
                     </MouseParallaxChild>
-
                 </MouseParallaxChild>
             </MouseParallaxContainer>
         </div>

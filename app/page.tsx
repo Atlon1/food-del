@@ -3,6 +3,8 @@ import React from 'react';
 import Pizza from './components/Pizza';
 import Banner from './components/Banner';
 
+import capricciossa from '../app/assets/capricciosa.webp';
+
 
 export type Topping = {
     image: string;
@@ -14,7 +16,7 @@ export type Pizza = {
     id: number;
     name: string;
     description: string;
-    image: string;
+    image: any;
     priceSm: number;
     priceMd: number;
     priceLg: number;
@@ -28,7 +30,7 @@ const pizzas: Pizza[] = [
         name: 'capricciosa',
         description:
             'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia recusandae dolorum enim eveniet. Mollitia laudantium, sunt blanditiis ratione quam delectus.',
-        image: '/capricciosa.webp',
+        image: capricciossa,
         priceSm: 9.99,
         priceMd: 10.99,
         priceLg: 11.99,
