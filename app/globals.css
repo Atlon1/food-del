@@ -14,6 +14,10 @@
     opacity: 0;
 }
 
+.bg-pattern {
+    background-image: url("./assets/pattern.png");
+}
+
 @layer base {
     body {
         @apply text-black;

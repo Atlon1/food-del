@@ -1,5 +1,5 @@
 import type { Config } from 'tailwindcss'
-import pattern from './app/assets/pattern.png'
+
 
 const config: Config = {
   content: [
@@ -31,9 +31,6 @@ const config: Config = {
         tertiary: '#331812',
         black: '#231714',
         orange: '#FF7A30',
-      },
-      backgroundImage: {
-        pattern: "url('/assets/pattern.png')",
       },
       backgroundSize: {
         'size-200': '200% 200%',
