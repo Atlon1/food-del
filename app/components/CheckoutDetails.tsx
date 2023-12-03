@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState} from "react";
 import {CartContext, CartItem} from "@/app/context/CartContext";
-import Image from "next/image";
+import success from "../assets/success-1.gif"
 
 
 type DetailsProps  = {
@@ -40,7 +40,7 @@ const CheckoutDetails  = ({setModal} : DetailsProps) => {
             {successMsg ? (
                 <div className='flex flex-col justify-center items-center h-[100vh] lg:h-[600px] px-6'>
                     <h2 className='text-2xl font-semibold text-center'>Thank you! The order has been placed!</h2>
-                    <Image src={'/success-1.gif'} width={150} height={150} alt='gif-success'/>
+                    <img src={success.src} className='w-[200px] h-[200px]' alt='success'/>
                     <div>
                         This is will close in <span> {count} </span> seconds
                     </div>

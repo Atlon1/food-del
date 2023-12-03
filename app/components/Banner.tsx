@@ -1,10 +1,7 @@
 'use client'
 
 import React from "react";
-
 import {MouseParallaxContainer, MouseParallaxChild} from 'react-parallax-mouse'
-import Image from "next/image";
-
 import banner from '../assets/pizza-banner.png'
 import chilli1 from '../assets/chilli-1.png'
 import chilli2 from '../assets/chilli-2.png'
@@ -12,8 +9,6 @@ import garlic1 from '../assets/garlic-1.png'
 import garlic2 from '../assets/garlic-2.png'
 import garlic3 from '../assets/garlic-3.png'
 import leaves1 from '../assets/leaves.png'
-
-
 
 
 const Banner = () => {

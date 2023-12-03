@@ -1,4 +1,5 @@
 import type { Config } from 'tailwindcss'
+import pattern from './app/assets/pattern.png'
 
 const config: Config = {
   content: [
@@ -32,7 +33,7 @@ const config: Config = {
         orange: '#FF7A30',
       },
       backgroundImage: {
-        pattern: "url('/pattern.png')",
+        pattern: "url('/assets/pattern.png')",
       },
       backgroundSize: {
         'size-200': '200% 200%',

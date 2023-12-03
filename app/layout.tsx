@@ -8,7 +8,6 @@ import CartProvider from "@/app/context/CartContext";
 import {Bangers, Quicksand, Roboto_Condensed} from 'next/font/google';
 import Footer from "@/app/components/Footer";
 
-// Define font variables
 const quicksand = Quicksand({
     subsets: ['latin'],
     variable: '--font-quicksand'
