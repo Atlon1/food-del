@@ -1,34 +1,76 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Welcome to PizzaWorld: Your Go-To Destination for Delightful Pizza Delivered to Your Doorstep
 
-## Getting Started
+**PizzaWorld**is your ultimate online destination for the pizza enthusiast in you. We offer a delectable variety of high-quality pizzas with a wide range of toppings and flavors, catering to both casual pizza lovers and those with a more refined palate. 
 
-First, run the development server:
+**PizzaWorld** is your ultimate online destination for the pizza enthusiast in you. We offer a delectable variety of high-quality pizzas with a wide range of toppings and flavors, catering to both casual pizza lovers and those with a more refined palate.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+**Explore the Best:** Dive into our curated collection of mouthwatering pizzas, crafted with the finest ingredients and a commitment to culinary excellence. Whether you prefer classic Margherita, meaty delights, or vegetarian options, PizzaWorld has something for everyone.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+**Expert Recommendations:** Our team of pizza connoisseurs is here to provide personalized recommendations, helping you choose the perfect pizza to satisfy your cravings and taste preferences.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+**Secure Ordering:** Order with confidence, knowing that PizzaWorld offers secure payment options, reliable delivery, and a hassle-free return policy in case you're not completely satisfied with your pizza experience.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+**Join Our Pizza Community:** Become a part of our thriving pizza community, where you can engage in discussions, share your favorite pizza creations, and gain insights from fellow pizza enthusiasts to elevate your pizza enjoyment.
 
-## Learn More
+## Features
 
-To learn more about Next.js, take a look at the following resources:
+* Navigation on bar
+* Cart
+* DataBase
+* ContextCart
+* Mause Parallel
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Technologies
+* Next JS
+* React Scroll
+* React Switch
+* Tailwind css
+* RWD
+* Typescript
+* React: react-router
+* Data Typescript
+* Custom hook
+    - useState
+    - useEffect
+    - useContext
+    - useParams
+* Responsive design
+* Animations
 
-## Deploy on Vercel
+## Demo <a href = "https://atlon1.github.io/food-del/"> here --></a>
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Desktop
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Main section
+<div align="center">
+<img src="app/assets/ReadMe/Desktop_1.jpg" width="500" alt="Desktop Screenshot" margin="20">
+ </div>
+
+## Cart section
+  <div align="center">
+<img src="app/assets/ReadMe/Dekstop_2.jpg" width="500" alt="Desktop Screenshot" margin="20">
+</div>
+
+## Bottom section
+<div align="center">
+<img src="app/assets/ReadMe/Desktop_3.jpg" width="500" alt="Desktop Screenshot" margin="20">
+</div>
+
+## Mobile
+
+## Main section
+<div align="center">
+<img src="app/assets/ReadMe/Mobile_1.jpg" width="300" alt="Mobile Screenshot">
+<img src="app/assets/ReadMe/Mobile_2.jpg" width="300" alt="Mobile Screenshot">
+<img src="app/assets/ReadMe/Mobile_3.jpg" width="300" alt="Mobile Screenshot">
+ </div>
+
+## Prerequisites
+* Before getting started, make sure you have the Node.js and npm or yarn
+* Clone this repository to your local machine
+* Navigate to the project directory
+* Install the project dependencies by running npm install or yarn install
+* Start the development server npm start or yarn start
+* Bash on folder Api to run strapi
+* Open your browser and visit your localhost:3000 to see the running application.
